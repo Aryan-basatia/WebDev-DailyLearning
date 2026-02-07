@@ -26,9 +26,6 @@ Track daily progress, challenges, and key takeaways from each learning session.
 
 Collection of practice projects built while learning new concepts.
 
-## 💡 Resources
-
-Recommended tutorials, articles, and documentation for web development.
 
 ---
 
