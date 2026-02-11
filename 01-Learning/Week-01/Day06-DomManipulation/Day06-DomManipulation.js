@@ -9,5 +9,10 @@
 // console.log(document.querySelector('a').getAttribute('href'));
 // const input =document.querySelector('input[type ="text"]');
 
-
+//classList
+const h2 = document.querySelector('h2');
+console.log(h2.classList);
+h2.classList.add('border');
+console.log(h2.classList);
+h2.classList.add('purple');
 
