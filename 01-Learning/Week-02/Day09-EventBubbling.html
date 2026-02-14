@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day09-EventBubbling</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<section onclick="alert('section clicked')">
+    <p onclick="alert('paragraph clicked')">
+        I am a paragraph
+        <button onclick="alert('button clicked')">Click me!!</button>
+    </p>
+</section>
+
+<div id="container">
+    click to hide
+    <button id="changeColor">Change color</button>
+</div>
+
+<script src="Day09-EventBubbling.js"></script>
+</body>
+</html>
