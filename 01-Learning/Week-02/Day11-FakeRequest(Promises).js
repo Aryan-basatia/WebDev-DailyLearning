@@ -43,7 +43,7 @@ const fakeRequestPromise = (url) => {
     console.log("it does not work",err);
 }); */
 
-fakeRequestPromise('hello.com/page1')
+/*fakeRequestPromise('hello.com/page1')
     .then(() => {
     console.log('it worked (page1)');
         fakeRequestPromise('hello.com/page2')
@@ -60,4 +60,24 @@ fakeRequestPromise('hello.com/page1')
         });
 }).catch(() => {
         console.log('its not working (pag1)');
-    });
+    });*/
+
+fakeRequestPromise('hello.com/page1')
+.then((data) => {
+    console.log('it worked (page1)');
+    console.log(data);
+    return fakeRequestPromise('hello.com/page2');
+})
+.then((data) => {
+    console.log('it worked (page2)');
+    console.log(data);
+    return fakeRequestPromise('hello.com/page3');
+})
+.then((data) => {
+        console.log('it worked (page3)');
+        console.log(data);
+})
+.catch((err) => {
+    console.log('Some request failed');
+    console.log(err);
+}) //Same catch for all value
