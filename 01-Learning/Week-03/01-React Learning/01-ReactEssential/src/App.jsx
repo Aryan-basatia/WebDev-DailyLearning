@@ -4,6 +4,13 @@ import Header from "./Component/Header/Header.jsx";
 import TabButton from "./Component/TabButton.jsx";
 
 function App() {
+    let tabContent = 'Please click a button';
+
+    function handleSelect(selectedButton){
+        tabContent = selectedButton;
+    }
+
+
     return (
         <div>
             <Header />
@@ -25,8 +32,12 @@ function App() {
                 <section id="examples">
                     <h2>Examples</h2>
                     <menu>
-                        <TabButton label='Components' />
+                        <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+                        <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+                        <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+                        <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
                     </menu>
+                    {tabContent}
                 </section>
             </main>
         </div>
